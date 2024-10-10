@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'drones.apps.DronesConfig',
     # Instalando o filtro Django
     'django_filters',
+    # Instalando a aplicação Core
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Definiçã de configurações de paginação global
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "drones.pagination.LimitOffsetPaginationWithUpperBound",
-    "PAGE_SIZE": 4,
+    "PAGE_SIZE": 5,
     "DEFAULT_FILTER_BACKENDS": (
         "django_filters.rest_framework.DjangoFilterBackend",
         "rest_framework.filters.OrderingFilter",

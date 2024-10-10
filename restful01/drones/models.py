@@ -10,7 +10,6 @@ class DroneCategory(models.Model):
     def __str__(self):
         return self.name
 
-
 class Drone(models.Model):
     name = models.CharField(max_length=250, unique=True)
     drone_category = models.ForeignKey(
